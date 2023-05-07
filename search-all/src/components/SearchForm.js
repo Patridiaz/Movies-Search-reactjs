@@ -26,21 +26,22 @@ export class SearchForm extends Component {
 
     render () {
         return (
-            <form onSubmit={ this._handleSubmit}>
+            <form onSubmit={this._handleSubmit}>
             <div class="field has-addons">
-            <div class="control">
-              <input className="input"
-              onChange={this._handleChange} 
-              type="text" 
-              placeholder="Movie to search..!"/>
+              <div class="control">
+                <input className="input"
+                  onChange={this._handleChange}
+                  type="text"
+                  placeholder="Movie to search..!" />
+              </div>
+              <div class="control">
+                <button class="button is-info">
+                  Search
+                </button>
+              </div>
             </div>
-            <div class="control">
-              <button class="button is-info">
-                Search
-              </button>
-            </div>
-          </div>
           </form>
+          
         )
     }
 }

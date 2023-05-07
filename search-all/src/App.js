@@ -22,16 +22,19 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Title> Searching...</Title>
-
-        <div className='SearchForm-wrapper'>
-          <SearchForm onResults={this._handleResults} />
+      <div className='container is-max-widescreen'>
+        <div className="notification is-danger">
+          <div className="App">
+            <Title> Searching...</Title>
+            <div className='SearchForm-wrapper'>
+              <SearchForm onResults={this._handleResults} />
+            </div>
+            {this.state.results.length === 0
+              ? <p>Sin Resultados</p>
+              : this._renderResults()
+            }
+          </div>
         </div>
-        {this.state.results.length === 0
-          ? <p>Sin Resultados</p>
-          : this._renderResults()
-        }
       </div>
     );
   }
