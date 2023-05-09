@@ -1,12 +1,12 @@
 .App {
-  padding-top: 36px;
   text-align: center;
 }
 
 .container {
-  padding-top: 3px;
+    
   display: contents;
 }
+
 .SearchForm-wrapper{
   display: flex;
   justify-content: center;
